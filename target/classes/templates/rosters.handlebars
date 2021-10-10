@@ -1,0 +1,202 @@
+
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Manager Roster</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+              integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="signing.css" crossorigin="anonymous">
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/offcanvas/">
+        <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<style>
+table, th, td{
+border: 1px solid black;
+}
+table{
+width:50%;
+border-collapse: collapse;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+
+
+<body>
+<div class="container bg-faded">
+    <h1 style="color: rgb(10, 134, 156);" class="text-center">Welcome To The Overgeared Restaurant </h1>
+
+    <div class="row">
+    </div>
+    <hr>
+    <form action="/rosters" method="POST">
+
+        <div class="sidebar">
+            <header id="header">The Overgeared Restaurant Waiters Chamber</header>
+            <a class="" href="/rosters">ROSTER SCHEDULE</a>
+            <a href="/absence_report" class="nav-link">ABSENCE REPORT</a>
+
+
+            <a href="/" class="nav-link">Home</a>
+
+
+        </div>
+        <div class="content">
+
+            <!--        <main id="main-doc">-->
+            <!--            <section class="main-section" id="Roster_Schedule">-->
+            <header>ROSTER SCHEDULE</header>
+            <table class=" table table-bordered text-dark">
+                <!--<tr>-->
+                <tr>
+
+                    {{#each days}}
+                        <th>
+                            {{this}}
+
+                        </th>
+                    {{/each}}
+
+                </tr>
+
+
+                <tr>
+
+                    <td scope="col">
+                        {{#each waiters1}}
+                            <li>{{this}}</li>
+
+                        {{/each}}
+
+                    </td>
+                    <td scope="col">
+                        {{#each waiters2}}
+                            <li>{{this}}</li>
+
+                        {{/each}}
+
+                    </td>
+                    <td scope="col">
+                        {{#each waiters3}}
+                            <li>{{this}}</li>
+
+                        {{/each}}
+
+                    </td>
+                    <td scope="col">
+
+                        {{#each waiters4}}
+                            <li>{{this}}</li>
+
+                        {{/each}}
+
+                    </td>
+                    <td scope="col">
+
+                        {{#each waiters5}}
+                            <li>{{this}}</li>
+
+                        {{/each}}
+
+                    </td>
+                    <td scope="col">
+                        {{#each waiters6}}
+                            <li>{{this}}</li>
+
+                        {{/each}}
+
+                    </td>
+                    <td scope="col">
+
+                        {{#each waiters7}}
+                            <li>{{this}}</li>
+
+                        {{/each}}
+
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+            <!--            </section>-->
+            <!--            <section class="main-section" id="Absence_Report">-->
+            <header>ABSENCE REPORT</header>
+            <h4>ABSENT</h4>
+            <!--            </section>-->
+            <!--                <section class="main-section" id="Help">-->
+            <header>HELP</header>
+            <h4>HELP</h4>
+            <!--                </section>-->
+
+
+        </div>
+    </form>
+    <br>
+</div>
+</div>
+</body>
+

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+
+</head>
+
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/JO1qcuv.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+</style>
+
+<body>
+
+<div class="hero-image">
+    <div class="hero-text">
+        <form class="landing-page" action="/" method="POST">
+            <h1>Welcome to the Overgeared Restaurant</h1>
+        </form>
+
+        <a href="/manager_chamber"><button class="btn btn-lg btn-primary btn-block" type="submit">Manager</button></a>
+        <br>
+        <br>
+        <a href="/waiter_chamber"><button class="btn btn-lg btn-primary btn-block" type="submit">Waiter</button></a>
+    </div>
+</div>
+
+
+</body>
+
+
