@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Absence</title>
+</head>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:400,500&display=swap');
+body {
+ font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+nav {
+  padding-top: 25px;
+  background-color: #FFE4FA;
+  border-right: 2px solid #A6E8E4;
+  min-width: 200px;
+  height: 100vh;
+  font-size: 12px;
+}
+nav a {
+  border-top: 1px solid #A6E8E4;
+  color: #4F4F4F;
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+nav a:hover {
+    background-color: #A6E8E4;
+    }
+main {
+  flex: 1;
+  padding: 20px;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+section {
+  padding: 15px;
+  line-height: 1.5;
+}
+header {
+  font-size: 15px;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+.header-padding {
+    padding: 25px;
+    background-color: #A6E8E4
+    }
+pre {
+  padding-top: 14px;
+  background-color: #A6E8E4
+}
+.content, #number {
+  width: 100%;
+  padding: 30px
+  }
+label  {
+  padding: 50px;
+}
+input {
+  display: flex;
+}
+input[type=submit]:hover {
+  background-color: #A6E8E4;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #FFE4FA;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1C2833;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div.parentElement{
+    text-align: center;
+    }
+.btn-work {
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+}
+@media (max-width: 600px){
+  body {
+    flex-direction: column;
+  }
+  nav {
+    border-right: none;
+    border-bottom: 2px solid #FFE4FA;
+    height: 300px;
+    overflow-y: scroll;
+    width: 100%
+  }
+  main {
+    height: auto;
+    width: 100%;
+    overflow-y: none;
+    text-align: center;
+  }
+.content {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.container bg-faded {
+    display: flex;
+    flex-direction: row;
+}
+}
+</style>
+
+
+<body>
+
+<nav id="navbar">
+    <div class="header-padding">
+        <header id="header">THE OVERGEARED</header>
+        <header id="header">RESTAURANT WAITER</header>
+        <header id="header">CHAMBERS</header>
+    </div>
+
+
+    <a class="nav-link" href="/waiter_chamber">ROSTER SCHEDULE</a>
+    <a class="nav-link" href="/waiterAbsence">ABSENCE REPORTING</a>
+    <a href="/" class="nav-link">HOME</a>
+</nav>
+
+<div class="container bg-faded">
+
+    <div class="content">
+        <h1 style="color: rgb(10, 134, 156);" class="text-center">ABSENCE REPORT CARD</h1>
+
+    </div>
+    <div>
+
+        <form action="/waiterAbsence" id="body" method="POST" class="parent">
+            <div class="content">
+                <label id="number" for="fname">Employee Name:</label><br>
+                <input type="text" id="fname" name="waiterName"><br>
+
+                <label id="number" class="dropdown" for="cars">Day of Absence:</label>
+                <select name="dayOff" id="cars">
+
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                    <option value="saturday">Saturday</option>
+                    <option value="sunday">Sunday</option>
+                </select><br>
+
+                <label id="number" class="content" for="cars">Day to replace shift:</label>
+                <select name="dayReplaced" id="cars">
+
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                    <option value="saturday">Saturday</option>
+                    <option value="sunday">Sunday</option>
+
+                </select>
+
+                <div id="parentElement">
+                    <input type="submit" value="Submit Request" class="btn-work">
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</div>
+</div>
+
+</body>
