@@ -167,35 +167,39 @@ th, td {
     </div>
     <div>
 
-        <form action="/absence_report" method="GET">
-            <table class="able table-bordered text-dark">
-                <tr>
-                    <th>Name</th>
-                    <th>Day Absent</th>
-                    <th>Day Replaced</th>
-                </tr>
+        <table class="able table-bordered text-dark">
+            <tr>
+                <th>Name</th>
+                <th>Day Absent</th>
 
-                <tr>
+                <th>Day Replaced</th>
+            </tr>
 
-                    {{#each dayAbsent }}
-                        <td>
-                            {{this}}
-                        </td>
-                    {{/each}}
+            <tr>
 
-                    {{#each name}}
-                        <td>
-                            {{this}}
-                        </td>
-                    {{/each}}
+            <td>
+                {{#each name}}
+                    {{this}}
+                </td>
+                {{/each}}
+            <td>{{#each dayAbsent}}
+                {{this}}
+            </td>
+            {{/each}}
+                </td>
+            <td>
+                {{#each dayToReplace}}
 
-                    {{#each dayToReplace}}
-                        <td>
-                            {{this}}
-                        </td>
-                    {{/each}}
-                </tr>
-            </table>
+                    {{this}}
+                </td>
+                {{/each}}
+
+            </tr>
+
+        </table>
+        </form>
+        <form action="/clearAbsent_list" method="GET">
+            <input type="submit" name="submit" value="Clear Absent List">
         </form>
 
     </div>
